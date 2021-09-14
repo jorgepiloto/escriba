@@ -1,0 +1,42 @@
+% Start generating the title page
+\begin{titlepage}
+
+  % All content will be centered within this page
+  \begin{center}
+
+    % Title of the essay
+    \noindent\rule{\textwidth}{1pt}
+    \\[0.25cm]
+    {
+    % Apply font size and color
+    \fontsize{35pt}{35pt}\selectfont
+    {
+      {{cookiecutter.title_name}}
+    }
+    }
+    \noindent\rule{\textwidth}{1pt}
+
+    % Add cover logo
+    \vspace{2cm}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.5]{static/logo.png}
+    \end{figure}
+    \vspace{1cm}
+
+    \vspace{1.5cm}
+    \textsc{\Large
+      {{cookiecutter.author_name}}
+    }\\[2cm]
+
+    \textsc{\large
+      {{cookiecutter.date}}
+    }\\[0.25cm]
+
+
+    \textsc{\large
+      {{cookiecutter.location}}
+    }\\[0.25cm]
+
+  \end{center}
+\end{titlepage}
