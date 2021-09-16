@@ -1,0 +1,44 @@
+%!TeX program = xelatex
+
+% Define document font, paper size and type %
+\documentclass[12pt, numbers=noenddot]{scrreprt}
+
+% Include all auxiliary packages
+\input{tex/packages.tex}
+
+% Bibliography setup
+\usepackage[backend=biber, style=ieee, citestyle=authoryear, sorting=ynt]{biblatex}
+\bibliography{bib/sample}
+
+% Custom commands: always the last ones to import to properly override default
+\input{tex/commands.tex}
+
+% Start the document
+\begin{document}
+
+% Switch off page numbering %
+\pagenumbering{Roman}
+
+% Append cover and prologue to actual document %
+\include{tex/cover}
+\blankpage
+\include{tex/preface}
+\blankpage
+
+% Start the table of contents, figures and tables %
+\tableofcontents
+
+% ---------- BEGIN OF CONTENT FILES -------------
+\pagenumbering{arabic}
+\input{src/00_introduction/index.tex}
+\input{src/01_installation/index.tex}
+\input{src/02_how_to_use/index.tex}
+\input{src/03_how_to_customize/index.tex}
+
+% ----------- END OF CONTENT FILES -------------
+
+
+% Cite the bibliography
+\printbibliography
+
+\end{document}

@@ -1,0 +1,18 @@
+\section{Available commands}
+
+As introduced in previous section, the Makefile contains all the rules and
+automation commands. Among these rules you can find:
+
+\begin{itemize}
+  \item \textbf{make clean}: this rule removes all the auxiliary files generated
+	  by \LaTeX, so your project directory becomes clean.
+  \item \textbf{make drawings}: this command will compile all the scripts stored
+	  in the asy/ directory but will not remove those from the fig/ one.
+  \item \textbf{make binaries}: this command will compile all the binaries
+	  hosted in the bin/ folder.
+  \item \textbf{make reformat}: by calling this rule, all your TeX files will be
+	  reformatted according to the options defined in the
+	  \$(LATEXINDENTOPTS) variable, which you can modify as you need.
+  \item \textbf{make pdf}: the command use to compile and render the whole
+	  project into a final PDF file.
+\end{itemize}
